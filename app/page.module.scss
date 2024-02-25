@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+
 .landing{
     position: relative;
     display: flex;
@@ -7,6 +12,10 @@
     img{
       object-fit: scale-down;
       object-position: left;
+      @media screen and (max-width: 768px) {
+        object-fit: cover;
+        object-position: right;
+      }
     }
     
     .sliderContainer{
@@ -20,6 +29,7 @@
     }
     
     .slider p{
+      font-family: Lobster;
       position: relative;
       margin: 0px;
       background: linear-gradient(to right, #aeffb4, #abadff,#ff94ff, #fff48f);
@@ -30,11 +40,16 @@
       font-weight: 500;
       padding-right: 50px;
     }
-    
+
     .slider p:nth-of-type(2){
       position: absolute;
       left: 100%;
       top: 0;
+    }
+    @media screen and (max-width: 768px) {
+      .slider p{
+        font-size: 100px;
+      }
     }
   
     .description{
@@ -42,7 +57,6 @@
       top: 48%;
       left: 65%;
       color: white;
-      font-size: 24px;
       font-weight: 300;
       p{
         background: linear-gradient(to right, #aeffb4, #abadff,#ff94ff, #fff48f);
@@ -59,5 +73,16 @@
         margin-bottom: 10px;
       }
     }
+    @media screen and (max-width: 768px) {
+      .description{
+        font-size: 12px;
+        top: 80%;
+        left: 10%;
+      }
   }
-  
+      @media screen and (max-width: 768px) {
+      .description p{
+        font-size: 20px;
+      }
+  }
+}

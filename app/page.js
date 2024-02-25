@@ -20,7 +20,7 @@ export default function Home() {
     gsap.to(slider.current, {
       scrollTrigger: {
         trigger: document.documentElement,
-        scrub: 0.25,
+        scrub: 0.5,
         start: 0,
         end: window.innerHeight,
         onUpdate: e => direction = e.direction * -1
@@ -40,7 +40,8 @@ export default function Home() {
     gsap.set(firstText.current, {xPercent: xPercent})
     gsap.set(secondText.current, {xPercent: xPercent})
     requestAnimationFrame(animate);
-    xPercent += 0.02 * direction;
+    xPercent += 0.03 * direction;
+
   }
 
   return (
@@ -52,7 +53,7 @@ export default function Home() {
       />
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
-          <p ref={firstText}>Rishi Lahoti -</p>
+          <p ref={firstText} className='md:text-[120px]'>Rishi Lahoti -</p>
           <p ref={secondText}>Rishi Lahoti -</p>
         </div>
       </div>
