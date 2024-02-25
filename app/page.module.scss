@@ -5,7 +5,8 @@
     overflow: hidden;
 
     img{
-      object-fit: cover;
+      object-fit: scale-down;
+      object-position: left;
     }
     
     .sliderContainer{
@@ -21,7 +22,10 @@
     .slider p{
       position: relative;
       margin: 0px;
-      color: white;
+      background: linear-gradient(to right, #aeffb4, #abadff,#ff94ff, #fff48f);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
       font-size: 230px;
       font-weight: 500;
       padding-right: 50px;
@@ -35,14 +39,20 @@
   
     .description{
       position: absolute;
-      top: 55%;
+      top: 48%;
       left: 65%;
       color: white;
       font-size: 24px;
       font-weight: 300;
       p{
+        background: linear-gradient(to right, #aeffb4, #abadff,#ff94ff, #fff48f);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
         margin: 0px;
         margin-bottom: 10px;
+        font-size: 24px;
+        font-weight: 500;
       }
       svg{
         transform: scale(2);

@@ -40,7 +40,7 @@ export default function Home() {
     gsap.set(firstText.current, {xPercent: xPercent})
     gsap.set(secondText.current, {xPercent: xPercent})
     requestAnimationFrame(animate);
-    xPercent += 0.04 * direction;
+    xPercent += 0.02 * direction;
   }
 
   return (
@@ -52,13 +52,22 @@ export default function Home() {
       />
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
-          <p ref={firstText}>Freelance Developer -</p>
-          <p ref={secondText}>Freelance Developer -</p>
+          <p ref={firstText}>Rishi Lahoti -</p>
+          <p ref={secondText}>Rishi Lahoti -</p>
         </div>
       </div>
       <div data-scroll data-scroll-speed={0.1} className={styles.description}>
         <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 8.5C8.27614 8.5 8.5 8.27614 8.5 8L8.5 3.5C8.5 3.22386 8.27614 3 8 3C7.72386 3 7.5 3.22386 7.5 3.5V7.5H3.5C3.22386 7.5 3 7.72386 3 8C3 8.27614 3.22386 8.5 3.5 8.5L8 8.5ZM0.646447 1.35355L7.64645 8.35355L8.35355 7.64645L1.35355 0.646447L0.646447 1.35355Z" fill="white"/>
+            <defs>
+              <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+                <stop offset="0%" stop-color="#aeffb4" />
+                <stop offset="25%" stop-color="#abadff" />
+                <stop offset="50%" stop-color="#ff94ff" />
+                <stop offset="75%" stop-color="#fff48f" />
+                <stop offset="100%" stop-color="#ff8f8f" />
+              </linearGradient>
+            </defs>
+          <path d="M8 8.5C8.27614 8.5 8.5 8.27614 8.5 8L8.5 3.5C8.5 3.22386 8.27614 3 8 3C7.72386 3 7.5 3.22386 7.5 3.5V7.5H3.5C3.22386 7.5 3 7.72386 3 8C3 8.27614 3.22386 8.5 3.5 8.5L8 8.5ZM0.646447 1.35355L7.64645 8.35355L8.35355 7.64645L1.35355 0.646447L0.646447 1.35355Z" fill="url(#grad1)"/>
         </svg>
         <p>Freelance</p>
         <p>Designer & Developer</p>
