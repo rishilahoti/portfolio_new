@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+
+.landing{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+
+    img{
+      background-color: black;
+      object-fit: scale-down;
+      object-position: left;
+      @media screen and (max-width: 768px) {
+        object-fit: cover;
+        object-position: right;
+      }
+    }
+    
+    .sliderContainer{
+      position: absolute;
+      top: calc(100vh - 350px);
+    }
+    
+    .slider{
+      position: relative;
+      white-space: nowrap;
+    }
+    
+    .slider p{
+      color: white;
+      font-family: Lexend;
+      position: relative;
+      margin: 0px;
+      font-size: 230px;
+      font-weight: 500;
+      padding-right: 50px;
+      cursor: default;
+    }
+    .slider p:hover {
+        background: -moz-linear-gradient(45deg, #aeffb4 0%, #abadff 25%, #ff94ff 50%, #fff48f 75%, #ff8282 100%);
+        background: -webkit-linear-gradient(45deg, #aeffb4 0%,#abadff 25%,#ff94ff 50%,#fff48f 75%,#ff8282 100%);
+        background: linear-gradient(45deg, #aeffb4 0%,#abadff 25%,#ff94ff 50%,#fff48f 75%,#ff8282 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aeffb4', endColorstr='#ff8282',GradientType=1 );
+        color:transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        transition: color 0.5s ease-in-out;
+      }
+    .slider p:nth-of-type(2){
+      position: absolute;
+      left: 100%;
+      top: 0;
+    }
+    @media screen and (max-width: 768px) {
+      .slider p{
+        font-size: 100px;
+      }
+    }
+  
+    .description{
+      position: absolute;
+      top: 48%;
+      left: 65%;
+      color: white;
+      font-weight: 300;
+      p{
+        font-family: Lexend;
+        margin: 0px;
+        margin-bottom: 10px;
+        font-size: 24px;
+        font-weight: 500;
+      }
+      p:hover{
+        cursor: default;      
+        background: -moz-linear-gradient(45deg, #aeffb4 0%, #abadff 25%, #ff94ff 50%, #fff48f 75%, #ff8282 100%);
+        background: -webkit-linear-gradient(45deg, #aeffb4 0%,#abadff 25%,#ff94ff 50%,#fff48f 75%,#ff8282 100%);
+        background: linear-gradient(45deg, #aeffb4 0%,#abadff 25%,#ff94ff 50%,#fff48f 75%,#ff8282 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aeffb4', endColorstr='#ff8282',GradientType=1 );
+        color:transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        transition: color 0.5s ease-in-out;
+      }
+      svg{
+        transform: scale(2);
+        margin-bottom: 10px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .description{
+        font-size: 12px;
+        top: 80%;
+        left: 10%;
+      }
+  }
+      @media screen and (max-width: 768px) {
+      .description p{
+        font-size: 20px;
+      }
+  }
+}
