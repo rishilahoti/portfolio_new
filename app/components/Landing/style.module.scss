@@ -11,9 +11,13 @@
       background-color: black;
       object-fit: scale-down;
       object-position: left;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px){
         object-fit: cover;
-        object-position: right;
+        object-position: -500px;
+      }
+      @media screen and (max-width: 768px){
+        object-fit: cover;
+        object-position: -650px;
       }
     }
     
@@ -38,10 +42,7 @@
       cursor: default;
     }
     .slider p:hover {
-        background: -moz-linear-gradient(45deg, #aeffb4 0%, #abadff 25%, #ff94ff 50%, #fff48f 75%, #ff8282 100%);
-        background: -webkit-linear-gradient(45deg, #aeffb4 0%,#abadff 25%,#ff94ff 50%,#fff48f 75%,#ff8282 100%);
-        background: linear-gradient(45deg, #aeffb4 0%,#abadff 25%,#ff94ff 50%,#fff48f 75%,#ff8282 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aeffb4', endColorstr='#ff8282',GradientType=1 );
+        background: linear-gradient(45deg, #dafff8 0%, #95f4ffcd 100%);
         color:transparent;
         -webkit-background-clip: text;
         background-clip: text;
@@ -73,14 +74,11 @@
       }
       p:hover{
         cursor: default;      
-        background: -moz-linear-gradient(45deg, #aeffb4 0%, #abadff 25%, #ff94ff 50%, #fff48f 75%, #ff8282 100%);
-        background: -webkit-linear-gradient(45deg, #aeffb4 0%,#abadff 25%,#ff94ff 50%,#fff48f 75%,#ff8282 100%);
         background: linear-gradient(45deg, #aeffb4 0%,#abadff 25%,#ff94ff 50%,#fff48f 75%,#ff8282 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aeffb4', endColorstr='#ff8282',GradientType=1 );
-        color:transparent;
-        -webkit-background-clip: text;
+        color: transparent;
         background-clip: text;
-        transition: color 0.5s ease-in-out;
+        transition: color 0.3s ease-in-out;
+        text-shadow: 2px 2px rgba($color: #000000, $alpha: 0.7);
       }
       svg{
         transform: scale(2);

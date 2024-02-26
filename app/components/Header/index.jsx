@@ -39,7 +39,9 @@ export default function index() {
             <div className={styles.logo}>
                 <p className={styles.copyright}>©</p>
                 <div className={styles.name}>
-                    <p className={styles.codeBy}>Code by</p>
+                    <p className={styles.RecodeBy}>ReCode by</p>
+                    <p className={styles.rishi}>Rishi</p>
+                    <p className={styles.lahoti}>Lahoti</p>
                 </div>
             </div>
             <div className={styles.nav}>
