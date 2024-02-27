@@ -6,6 +6,10 @@ import { menuSlide } from '../animation';
 import Link from './Link';
 import Curve from './Curve';
 import Footer from './Footer';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Rounded from '../../../common/RoundedButton';
+import Magnetic from '../../../common/Magnetic';
 
 const navItems = [
   {
@@ -39,7 +43,7 @@ export default function Index() {
       className={styles.menu}
     >
       <div className={styles.body}>
-        <div onMouseLeave={() => {setSelectedIndicator(pathname)}} className={styles.nav}>
+        <div onMouseLeave={() => {setSelectedIndicator(path)}} className={styles.nav}>
           <div className={styles.header}>
             <p>Navigation</p>
           </div>

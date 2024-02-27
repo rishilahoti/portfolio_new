@@ -1,4 +1,5 @@
 .menu{
+    font-family: Lexend;
     height: 100vh;
     background-color: rgb(41, 41, 41);
     position: fixed;
@@ -36,5 +37,21 @@
             }
             
         }
+    }
+}
+
+.menu {
+        @media screen and (max-width: 768px) {
+        width: 100%;
+        .body{
+            padding: 50px;
+            .nav{
+                font-size: 36px;
+                .header{
+                    font-size: 8px;
+                }
+            }
+        }
+        
     }
 }
