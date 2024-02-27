@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client'
 import Image from 'next/image'
 import styles from './style.module.scss'
@@ -45,7 +46,7 @@ export default function Home() {
 
   return (
     <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
-      <Image 
+      <Image
         src="/images/IMG_6410.JPG"
         fill={true}
         alt="background"
@@ -62,8 +63,8 @@ export default function Home() {
         <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
-                <stop offset="0%" stop-color="#99f6e4" />
-                <stop offset="100%" stop-color="#6ee7b7" />
+                <stop offset="0%" stopColor="#dafff8" />
+                <stop offset="100%" stopColor="#95f4ff" />
               </linearGradient>
             </defs>
           <path d="M8 8.5C8.27614 8.5 8.5 8.27614 8.5 8L8.5 3.5C8.5 3.22386 8.27614 3 8 3C7.72386 3 7.5 3.22386 7.5 3.5V7.5H3.5C3.22386 7.5 3 7.72386 3 8C3 8.27614 3.22386 8.5 3.5 8.5L8 8.5ZM0.646447 1.35355L7.64645 8.35355L8.35355 7.64645L1.35355 0.646447L0.646447 1.35355Z" fill="url(#grad1)"/>
