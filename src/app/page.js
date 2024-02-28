@@ -2,12 +2,12 @@
 import styles from './page.module.scss'
 import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion';
-import Preloader from './components/Preloader';
-import Landing from './components/Landing';
+import Preloader from '../components/Preloader';
+import Landing from '../components/Landing';
 import Lenis from '@studio-freight/lenis'
 import { useScroll } from 'framer-motion';
 import { projects } from './data';
-import Projects from './components/Projects';
+import Projects from '../components/Projects';
 import { useRef } from 'react';
 // import Description from './components/Description';
 // import SlidingImages from './components/SlidingImages';

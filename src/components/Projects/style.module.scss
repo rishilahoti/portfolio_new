@@ -5,6 +5,14 @@
   justify-content: center;
   position: sticky;
   top: 0px;
+  @media screen and (max-width: 1024px){
+    margin: auto;
+  }
+
+  @media screen and (max-width: 768px){
+    margin: auto;
+    
+  }
   .card{
     display: flex;
     flex-direction: column;

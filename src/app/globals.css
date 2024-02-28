@@ -5,4 +5,8 @@ body{
     margin: 0px;
     overflow: hidden; /* Hide scrollbars */
     cursor: wait;
+
+    @media screen and (max-width: 768px){
+        overflow: visible;
+    }
 }
