@@ -33,6 +33,13 @@ export default function index() {
         })
     }, [])
 
+    const scrollToProjects = () => {
+        const projectsSection = document.getElementById('work');
+        if (projectsSection) {
+            projectsSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll behavior
+        }
+    };
+
     return (
         <>
         <div ref={header} className={styles.header}>
@@ -46,7 +53,7 @@ export default function index() {
             </div>
             <div className={styles.nav}>
                 <Magnetic>
-                    <div className={styles.el}>
+                    <div className={styles.el} onClick={scrollToProjects}>
                         <a>Work</a>
                         <div className={styles.indicator}></div>
                     </div>

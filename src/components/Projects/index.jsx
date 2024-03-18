@@ -16,7 +16,7 @@ const Card = ({i, title, description, src, url, color, progress, range, targetSc
   const scale = useTransform(progress, range, [1, targetScale]);
  
   return (
-    <div ref={container} className={styles.cardContainer}>
+    <div ref={container} className={styles.cardContainer} id='work'>
       <motion.div 
         style={{backgroundColor: color, scale, top:`calc(-5vh + ${i * 25}px)`}} 
         className={styles.card}
@@ -52,4 +52,4 @@ const Card = ({i, title, description, src, url, color, progress, range, targetSc
   )
 }
 
-export default Card
+export default Card;
