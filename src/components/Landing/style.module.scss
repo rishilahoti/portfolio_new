@@ -13,30 +13,52 @@
 
     img{
       pointer-events: none;
-      background-color: black;
-      object-fit: scale-down;
-      object-position: left;
+      object-fit: cover;
       -webkit-user-select: none;
       -webkit-touch-callout: none;
       -moz-user-select: none;
-      -ms-user-select: none;
       user-select: none;
       @media screen and (max-width: 1024px){
         object-fit: cover;
-        object-position: -500px;
         -webkit-user-select: none;
         -webkit-touch-callout: none;
         -moz-user-select: none;
-        -ms-user-select: none;
         user-select: none;
       }
       @media screen and (max-width: 768px){
         object-fit: cover;
+        margin-top: 40px;
         object-position: -650px;
         -webkit-user-select: none;
         -webkit-touch-callout: none;
         -moz-user-select: none;
-        -ms-user-select: none;
+        user-select: none;
+      }
+      @media screen and (max-width: 425px){
+        object-fit: cover;
+        object-position: -590px;
+        margin-top: 40px;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media screen and (max-width: 395px){
+        object-fit: cover;
+        object-position: -550px;
+        margin-top: 40px;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media screen and (max-width: 376px){
+        object-fit: cover;
+        object-position: -450px;
+        margin-top: 40px;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
         user-select: none;
       }
     }
@@ -44,33 +66,11 @@
     .sliderContainer{
       position: absolute;
       top: calc(100vh - 300px);
-      @media screen and (max-width: 768px){
-        display: hidden;
-      }
     }
     
     .slider{
       position: relative;
       white-space: nowrap;
-      @media screen and (max-width: 768px){
-        width: auto;
-        p:nth-child(1){
-          font-size: 40px;
-          -webkit-user-select: none;
-          -webkit-touch-callout: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-        }
-        p:nth-child(2){
-          font-size: 40px;
-          -webkit-user-select: none;
-          -webkit-touch-callout: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-        }
-      }
       @media screen and (max-width: 1024px){
         width: auto;
         margin: 190px;
@@ -79,7 +79,6 @@
           -webkit-user-select: none;
           -webkit-touch-callout: none;
           -moz-user-select: none;
-          -ms-user-select: none;
           user-select: none;
         }
         p:nth-child(2){
@@ -87,7 +86,43 @@
           -webkit-user-select: none;
           -webkit-touch-callout: none;
           -moz-user-select: none;
-          -ms-user-select: none;
+          user-select: none;
+        }
+      }
+      @media screen and (max-width: 768px){
+        width: auto;
+        p:nth-child(1){
+          font-size: 40px;
+          top: 30px;
+          -webkit-user-select: none;
+          -webkit-touch-callout: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+        p:nth-child(2){
+          font-size: 40px;
+          -webkit-user-select: none;
+          -webkit-touch-callout: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+      }
+      @media screen and (max-width: 378px){
+        width: auto;
+        p:nth-child(1){
+          font-size: 40px;
+          top: -400px;
+          -webkit-user-select: none;
+          -webkit-touch-callout: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+        p:nth-child(2){
+          font-size: 40px;
+          top: -400px;
+          -webkit-user-select: none;
+          -webkit-touch-callout: none;
+          -moz-user-select: none;
           user-select: none;
         }
       }
@@ -105,7 +140,6 @@
       -webkit-user-select: none;
       -webkit-touch-callout: none;
       -moz-user-select: none;
-      -ms-user-select: none;
       user-select: none;
     }
     .slider p:hover {
@@ -114,29 +148,79 @@
         -webkit-background-clip: text;
         background-clip: text;
         transition: color 0.5s ease-in-out;
-        -webkit-user-select: none;
-        -webkit-touch-callout: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
       }
-    .slider p:nth-of-type(1){
-      -webkit-user-select: none;
-      -webkit-touch-callout: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
     .slider p:nth-of-type(2){
       position: absolute;
       left: 100%;
       top: 0;
-      -webkit-user-select: none;
-      -webkit-touch-callout: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
     }
+
+    .sliderContainer{
+      position: absolute;
+      top: calc(100vh - 300px);
+    }
+    
+    .slider{
+      position: relative;
+      white-space: nowrap;
+      @media screen and (max-width: 1024px){
+        width: auto;
+        margin: 190px;
+        p:nth-child(1){
+          font-size: 80px;
+          -webkit-user-select: none;
+          -webkit-touch-callout: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+        p:nth-child(2){
+          font-size: 80px;
+          -webkit-user-select: none;
+          -webkit-touch-callout: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+      }
+      @media screen and (max-width: 768px){
+        width: auto;
+        p:nth-child(1){
+          font-size: 40px;
+          top: 30px;
+          -webkit-user-select: none;
+          -webkit-touch-callout: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+        p:nth-child(2){
+          font-size: 40px;
+          top: 30px;
+          -webkit-user-select: none;
+          -webkit-touch-callout: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+      }
+      @media screen and (max-width: 378px){
+        width: auto;
+        p:nth-child(1){
+          font-size: 40px;
+          top: -400px;
+          -webkit-user-select: none;
+          -webkit-touch-callout: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+        p:nth-child(2){
+          font-size: 40px;
+          top: -400px;
+          -webkit-user-select: none;
+          -webkit-touch-callout: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+      }
+    }
+
     .description{
       position: absolute;
       top: 48%;
@@ -152,7 +236,6 @@
         -webkit-user-select: none;
         -webkit-touch-callout: none;
         -moz-user-select: none;
-        -ms-user-select: none;
         user-select: none;
       }
       p:hover{
@@ -165,7 +248,6 @@
         -webkit-user-select: none;
         -webkit-touch-callout: none;
         -moz-user-select: none;
-        -ms-user-select: none;
         user-select: none;
       }
       svg{
@@ -186,7 +268,6 @@
         -webkit-user-select: none;
         -webkit-touch-callout: none;
         -moz-user-select: none;
-        -ms-user-select: none;
         user-select: none;
       }
   }

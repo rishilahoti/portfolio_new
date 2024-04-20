@@ -5,7 +5,6 @@ import { useTransform, motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
 
 const Card = ({i, title, description, src, url, color, progress, range, targetScale}) => {
-
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -14,7 +13,7 @@ const Card = ({i, title, description, src, url, color, progress, range, targetSc
 
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1])
   const scale = useTransform(progress, range, [1, targetScale]);
- 
+
   return (
     <div ref={container} className={styles.cardContainer} id='work'>
       <motion.div 
@@ -32,7 +31,6 @@ const Card = ({i, title, description, src, url, color, progress, range, targetSc
               </svg>
             </span>
           </div>
-
           <div className={styles.imageContainer}>
             <motion.div
               className={styles.inner}
@@ -45,7 +43,6 @@ const Card = ({i, title, description, src, url, color, progress, range, targetSc
               />
             </motion.div>
           </div>
-
         </div>
       </motion.div>
     </div>
