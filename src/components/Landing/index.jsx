@@ -18,16 +18,18 @@ export default function Home() {
 
   useLayoutEffect( () => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to(slider.current, {
-      scrollTrigger: {
-        trigger: document.documentElement,
-        scrub: 0.5,
-        start: 0,
-        end: window.innerHeight,
-        onUpdate: e => direction = e.direction * -1
-      },
-      x: "-500px",
-    })
+    if (slider.current) {
+      gsap.to(slider.current, {
+        scrollTrigger: {
+          trigger: document.documentElement,
+          scrub: 0.5,
+          start: 0,
+          end: window.innerHeight,
+          onUpdate: e => direction = e.direction * -1
+        },
+        x: "-500px",
+      })
+    }
     requestAnimationFrame(animate);
   }, [])
 
@@ -50,6 +52,7 @@ export default function Home() {
         src="/images/4.png"
         fill={true}
         alt="background"
+        priority={true}
       />
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>

@@ -53,9 +53,9 @@
             font-family: Lexend;
           }
           @media screen and (max-width: 768px){
-            font-size: 30px;
+            font-size: 20px;
             &::first-letter{
-            font-size: 34px;
+            font-size: 24px;
             font-family: Lexend;
           }
         }
@@ -72,7 +72,6 @@
           }
           @media screen and (max-width: 768px){
             display: flex;
-            
           }
         }
       }

@@ -9,7 +9,7 @@ import { useScroll } from 'framer-motion';
 import { projects } from './data';
 import Projects from '../components/Projects';
 import { useRef } from 'react';
-// import Description from './components/Description';
+import Description from '../components/Description';
 // import SlidingImages from './components/SlidingImages';
 // import Contact from './components/Contact';
 
@@ -60,7 +60,7 @@ export default function Home() {
           return <Projects key={`p_${i}`} i={i} {...project} progress={scrollYProgress} range={[i * .25, 1]} targetScale={targetScale}/>
         })
       }
-      {/* <Description />
+      {/*
       <SlidingImages />
       <Contact /> */}
     </main>
