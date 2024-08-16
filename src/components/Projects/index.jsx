@@ -13,6 +13,7 @@ const Card = ({i, title, description, description2, description3, src, link, col
 
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1])
   const scale = useTransform(progress, range, [1, targetScale]);
+  const height = useTransform(scrollYProgress, [0, 0.9], [50, 0])
 
   return (
     <div ref={container} className={styles.cardContainer} id='work' >
@@ -46,6 +47,9 @@ const Card = ({i, title, description, description2, description3, src, link, col
             </motion.div>
           </div>
         </div>
+      </motion.div>
+      <motion.div style={{height}} className={styles.circleContainer}>
+        <div className={styles.circle}></div>
       </motion.div>
     </div>
   )

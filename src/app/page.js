@@ -10,7 +10,7 @@ import { projects } from './data';
 import Projects from '../components/Projects';
 import { useRef } from 'react';
 import Description from '../components/Description';
-// import Contact from './components/Contact';
+import Contact from '../components/Contact';
 
 export default function Home() {
 
@@ -60,9 +60,7 @@ export default function Home() {
           return <Projects key={`p_${i}`} i={i} {...project} progress={scrollYProgress} range={[i * .25, 1]} targetScale={targetScale}/>
         })
       }
-      {/*
-      <SlidingImages />
-      <Contact /> */}
+      <Contact />
     </main>
   )
 }
