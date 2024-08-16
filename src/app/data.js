@@ -1,8 +1,8 @@
 export const projects = [
   {
     title: "Portfolio",
-    description: `Spearheaded the development of a professional portfolio website, drawing inspiration from the renowned portfolio of Dennis Snellenberg.`,
-    description2: `Leveraged NexJs, Sass, JavaScript, CSS, and HTML to create a dynamic and visually appealing user experience.`,
+    description: `Portfolio website, inspiration from the portfolio of Dennis Snellenberg.`,
+    description2: `Leveraged NextJs, Sass, JavaScript, CSS, and HTML to create a dynamic and visually appealing user experience.`,
     description3: `Ensured full responsiveness across various devices for optimal user engagement.`,
     src: "portfolio_new.png",
     link: "https://github.com/rishilahoti/portfolio_new",
@@ -19,7 +19,7 @@ export const projects = [
   },
   {
     title: "PESU Food Cart",
-    description: `Design and development efforts for a dynamic food ordering web application tailored for the college cafeteria.`,
+    description: `Design for a dynamic food ordering web application tailored for the college cafeteria.`,
     description2: `Implementing user-friendly interfaces and streamlined ordering processes to enhance user experience and satisfaction.`,
     description3: `Using modern web development technologies and best practices to deliver a high-quality, responsive, and scalable solution.`,
     src: "foodapp.png",

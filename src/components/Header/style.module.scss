@@ -17,6 +17,7 @@
     .logo{
         display: flex;
         cursor: pointer;
+        font-weight: 400;
         p{
             margin: 0px;
             transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
@@ -51,9 +52,8 @@
                     transform: translateX(-100%);
                 }
                 .rishi{
-                    transform: translateX(-85px);
-                    background: linear-gradient(45deg, #dafff8 0%, #95f4ffcd 100%);
-                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aeffb4', endColorstr='#ff8282',GradientType=1 );
+                    transform: translateX(-81px);
+                    background: linear-gradient(45deg, #b9fdf0 0%, #7bf2ff 100%);
                     color:transparent;
                     -webkit-background-clip: text;
                     background-clip: text;
@@ -61,8 +61,7 @@
                 }
                 .lahoti{
                     transform: translateX(-83px);
-                    background: linear-gradient(45deg, #dafff8 0%, #95f4ffcd 100%);
-                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aeffb4', endColorstr='#ff8282',GradientType=1 );
+                    background: linear-gradient(45deg, #b9fdf0 0%, #7bf2ff 100%);
                     color:transparent;
                     -webkit-background-clip: text;
                     background-clip: text;
@@ -81,11 +80,12 @@
             z-index: 1;
             padding: 15px;
             cursor: pointer;
+            font-weight: 400;
             &:hover{
-                background: linear-gradient(45deg, #dafff8 0%, #95f4ff 100%);
+                background: linear-gradient(45deg, #bafff2 0%, #81f2ff 100%);
                 color:transparent;
                 background-clip: text;
-                font-weight: 500;
+                font-weight: 600;
                 transition: color 0.5s ease-in-out;
                 .indicator{
                     transform: scale(1);
