@@ -1,28 +1,37 @@
 import styles from './style.module.scss';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { slide, scale } from '../../animation';
 
-export default function Index({data, isActive, setSelectedIndicator}) {
+export default function Index({ data, isActive, setSelectedIndicator }) {
+    const { title, href, index } = data;
   
-    const { title, href, index} = data;
-  
+    const handleScroll = (e) => {
+        e.preventDefault();
+        const targetElement = document.getElementById(href.replace("#", ""));
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+            setSelectedIndicator(href);
+        }
+    };
+
     return (
       <motion.div 
         className={styles.link} 
-        onMouseEnter={() => {setSelectedIndicator(href)}} 
+        onMouseEnter={() => { setSelectedIndicator(href) }} 
         custom={index} 
         variants={slide} 
         initial="initial" 
         animate="enter" 
         exit="exit"
+        onClick={handleScroll}
       >
         <motion.div 
           variants={scale} 
           animate={isActive ? "open" : "closed"} 
-          className={styles.indicator}>
+          className={styles.indicator}
+        >
         </motion.div>
-        <Link href={href}>{title}</Link>
+        <a href={href} onClick={handleScroll}>{title}</a>
       </motion.div>
-    )
+    );
 }
