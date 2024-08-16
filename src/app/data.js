@@ -10,7 +10,7 @@ export const projects = [
   },
   {
     title: "Vanilla Portfolio",
-    description: `Conceptualized and implemented a captivating portfolio showcasing a range of projects through animated cards and a skill graph.`,
+    description: `Portfolio showcasing a range of projects through animated cards and a skill graph.`,
     description2: `Integrated contact support functionality and seamlessly integrated social media handles.`,
     description3: `Achieved full responsiveness to guarantee an exceptional user experience on all devices.`,
     src: "vanilla.png",
@@ -21,18 +21,16 @@ export const projects = [
     title: "PESU Food Cart",
     description: `Design for a dynamic food ordering web application tailored for the college cafeteria.`,
     description2: `Implementing user-friendly interfaces and streamlined ordering processes to enhance user experience and satisfaction.`,
-    description3: `Using modern web development technologies and best practices to deliver a high-quality, responsive, and scalable solution.`,
     src: "foodapp.png",
     link: "https://www.figma.com/file/sbPGg7Yz9J2dJvGEHYJywa/PESU-Food-Cart?type=design&node-id=0%3A1&mode=design&t=69Fq8cPhfENvQmhR-1",
     color: "#e1f0da"
   },
   {
-    title: "SOR-T Project",
-    description: `Led the design process for the SOR-T project, envisioning the user interface and experience for an imaginary Potential Building Agency.`,
-    description2: `Utilized Figma to create visually stunning and intuitive designs, informed by the principles of Crazy-8.`,
-    description3: `Ensured coherence and user-friendliness throughout the interface for maximum usability.`,
-    src: "sort.png",
-    link: "https://www.figma.com/file/HZeeFTl4U8AcxwgAMPjU60/SORT-(Community)?type=design&mode=design&t=SwEQuB175Ol0zc6K-1",
+    title: "organicherbal.in",
+    description: `Designing and developing a user-friendly and visually appealing website for a business specializing in raw Ayurvedic herbs 
+                  and spices, enhancing online presence and customer engagement.`,
+    src: "organicherbal.png",
+    link: "https://organicherbal.in",
     color: "#ffe3e1"
   },
   {
