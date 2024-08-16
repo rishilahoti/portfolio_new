@@ -6,10 +6,6 @@ import { menuSlide } from '../animation';
 import Link from './Link';
 import Curve from './Curve';
 import Footer from './Footer';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Rounded from '../../../common/RoundedButton';
-import Magnetic from '../../../common/Magnetic';
 
 const navItems = [
   {

@@ -3,9 +3,9 @@
 body{
     font-family: Lexend;
     margin: 0px;
-    overflow: hidden; /* Hide scrollbars */
+    overflow: hidden; 
     cursor: wait;
-
+    background-color: antiquewhite;
     @media screen and (max-width: 768px){
         overflow: visible;
     }
