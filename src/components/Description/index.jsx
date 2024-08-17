@@ -1,7 +1,7 @@
 import styles from './styles.module.scss';
 import { useInView, motion } from 'framer-motion';
 import { useRef } from 'react';
-import { slideUp, opacity } from './animation';
+import { slideUp, slideIn } from './animation';
 import Magnetic from '../../common/Magnetic';
 
 export default function index() {
@@ -21,7 +21,7 @@ export default function index() {
                     ))
                 }
                 </p>
-                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>
+                <motion.p variants={slideIn} animate={isInView ? "open" : "closed"}>
                     Other than that, I like video games, anime, Formula 1, NBA and e-Sports. I touch grass by playing basketball and skating.
                 </motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
