@@ -29,11 +29,9 @@ export default function Home() {
 			});
 			setTime(indiaTime);
 		};
-
-		updateTime(); // Set initial time
-		const intervalId = setInterval(updateTime, 1000); // Update every second
-
-		return () => clearInterval(intervalId); // Cleanup on unmount
+		updateTime();
+		const intervalId = setInterval(updateTime, 1000);
+		return () => clearInterval(intervalId);
 	}, []);
 
 	useLayoutEffect(() => {
