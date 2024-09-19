@@ -1,44 +1,45 @@
 export const projects = [
-  {
-    title: "Portfolio",
-    description: `Portfolio website, inspiration from the portfolio of Dennis Snellenberg.`,
-    description2: `Leveraged NextJs, Sass, JavaScript, CSS, and HTML to create a dynamic and visually appealing user experience.`,
-    description3: `Ensured full responsiveness across various devices for optimal user engagement.`,
-    src: "portfolio_new.png",
-    link: "https://github.com/rishilahoti/portfolio_new",
-    color: "#ffc6a6"
-  },
-  {
-    title: "Vanilla Portfolio",
-    description: `Portfolio showcasing a range of projects through animated cards and a skill graph.`,
-    description2: `Integrated contact support functionality and seamlessly integrated social media handles.`,
-    description3: `Achieved full responsiveness to guarantee an exceptional user experience on all devices.`,
-    src: "vanilla.png",
-    link: "https://github.com/rishilahoti/Portfolio",
-    color: "#e5e0ff"
-  },
-  {
-    title: "PESU Food Cart",
-    description: `Design for a dynamic food ordering web application tailored for the college cafeteria.`,
-    description2: `Implementing user-friendly interfaces and streamlined ordering processes to enhance user experience and satisfaction.`,
-    src: "foodapp.png",
-    link: "https://www.figma.com/file/sbPGg7Yz9J2dJvGEHYJywa/PESU-Food-Cart?type=design&node-id=0%3A1&mode=design&t=69Fq8cPhfENvQmhR-1",
-    color: "#e1f0da"
-  },
-  {
-    title: "organicherbal.in",
-    description: `Designing and developing a user-friendly and visually appealing website for a business specializing in raw Ayurvedic herbs 
+	{
+		title: 'Portfolio',
+		description: `Portfolio website, inspiration from the portfolio of Dennis Snellenberg.`,
+		description2: `Tech Stack: NextJs, Sass, JavaScript, Framer Motion and GSAP.`,
+		description3: `Ensured full responsiveness across various devices for optimal user engagement. But may vary because of development.`,
+		src: 'portfolio_new.png',
+		link: 'https://github.com/rishilahoti/portfolio_new',
+		color: '#ffc6a6',
+	},
+	{
+		title: 'template-next-15rc',
+		description: `Comprehensive App Template: This is a production-ready app template with all essential tools and features, allowing users to easily fork and build apps.`,
+		description2: `Tech Stack: It includes Postgres DB with Prisma ORM, Lucia authentication, Vercel DB, Shadcn UI components, Tailwind CSS, and real-time form validation using React Hook Form & Zod.`,
+		description3: `Additional Features: The app offers a functional search field, and supports light, dark, and system themes for user customization.`,
+		src: 'template.mp4',
+		link: 'https://github.com/rishilahoti/template-next-15rc',
+		color: '#e5e0ff',
+	},
+	{
+		title: 'DocsNexGen',
+		description: `Tech Stack: The app uses Next.js, TypeScript, Liveblocks, Lexical Editor, ShadCN, and Tailwind CSS for its architecture and styling.`,
+		description2: `Features: It offers GitHub, Google, and LinkedIn authentication via NextAuth, a real-time collaborative text editor, document management (create, delete, share, list), a commenting system, and real-time presence indicators.`,
+        description3: `Additional Features: Includes user notifications, responsive design, and modular code architecture for scalability and maintainability.`,
+		src: 'Pitch.png',
+		link: 'https://github.com/rishilahoti/docs-new-version',
+		color: '#e1f0da',
+	},
+	{
+		title: 'organicherbal.in',
+		description: `Designing and developing a user-friendly and visually appealing website for a business specializing in raw Ayurvedic herbs 
                   and spices, enhancing online presence and customer engagement.`,
-    src: "organicherbal.png",
-    link: "https://organicherbal.in",
-    color: "#ffe3e1"
-  },
-  {
-    title: "React Movie App",
-    description: `Recreated a movie search application using React, integrating real-time data retrieval from the OMDB API.`,
-    description2: `Implemented features allowing users to add and remove movies from favorites, enhancing personalization and user engagement.`,
-    src: "movieapp.png",
-    link: "https://github.com/rishilahoti/React-Movie-App",
-    color: "#e3f4f4"
-  }
-]
+		src: 'organicherbal.png',
+		link: '',
+		color: '#ffe3e1',
+	},
+	{
+		title: '',
+		description: ``,
+		description2: ``,
+		src: '',
+		link: '',
+		color: '#faebd700',
+	},
+];
