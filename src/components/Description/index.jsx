@@ -27,7 +27,7 @@ export default function index() {
                 <div data-scroll data-scroll-speed={0.1}>
                     <Magnetic>
                     <div className={styles.button}>
-                        About me
+                        Resume in menu.
                     </div>
                     </Magnetic>
                 </div>
