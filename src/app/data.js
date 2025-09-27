@@ -21,7 +21,7 @@ export const projects = [
 		title: 'DocsNexGen',
 		description: `Tech Stack: The app uses Next.js, TypeScript, Liveblocks, Lexical Editor, ShadCN, and Tailwind CSS for its architecture and styling.`,
 		description2: `Features: It offers GitHub, Google, and LinkedIn authentication via NextAuth, a real-time collaborative text editor, document management (create, delete, share, list), a commenting system, and real-time presence indicators.`,
-        description3: `Additional Features: Includes user notifications, responsive design, and modular code architecture for scalability and maintainability.`,
+		description3: `Additional Features: Includes user notifications, responsive design, and modular code architecture for scalability and maintainability.`,
 		src: 'Pitch.png',
 		link: 'https://github.com/rishilahoti/docs-new-version',
 		color: '#e1f0da',

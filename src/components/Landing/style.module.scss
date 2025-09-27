@@ -1,206 +1,205 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
+.landing {
+	position: relative;
+	display: flex;
+	height: 100vh;
+	overflow: hidden;
+	@media screen and (max-width: 1024px) {
+		margin: auto;
+		padding: auto;
+	}
 
-.landing{
-    position: relative;
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
-    @media screen and (max-width: 1024px){
-      margin: auto;
-      padding: auto;
-    }
+	img {
+		pointer-events: none;
+		object-fit: cover;
+		user-select: none;
+		@media screen and (max-width: 1024px) {
+			object-fit: cover;
+			user-select: none;
+		}
+		@media screen and (max-width: 768px) {
+			object-fit: cover;
+			margin-top: 40px;
+			object-position: -650px;
+			user-select: none;
+		}
+		@media screen and (max-width: 425px) {
+			object-fit: cover;
+			object-position: -590px;
+			margin-top: 40px;
+			user-select: none;
+		}
+		@media screen and (max-width: 395px) {
+			object-fit: cover;
+			object-position: -550px;
+			margin-top: 40px;
+			user-select: none;
+		}
+		@media screen and (max-width: 376px) {
+			object-fit: cover;
+			object-position: -450px;
+			margin-top: 40px;
+			user-select: none;
+		}
+	}
 
-    img{
-      pointer-events: none;
-      object-fit: cover;
-      user-select: none;
-      @media screen and (max-width: 1024px){
-        object-fit: cover;
-        user-select: none;
-      }
-      @media screen and (max-width: 768px){
-        object-fit: cover;
-        margin-top: 40px;
-        object-position: -650px;
-        user-select: none;
-      }
-      @media screen and (max-width: 425px){
-        object-fit: cover;
-        object-position: -590px;
-        margin-top: 40px;
-        user-select: none;
-      }
-      @media screen and (max-width: 395px){
-        object-fit: cover;
-        object-position: -550px;
-        margin-top: 40px;
-        user-select: none;
-      }
-      @media screen and (max-width: 376px){
-        object-fit: cover;
-        object-position: -450px;
-        margin-top: 40px;
-        user-select: none;
-      }
-    }
-    
-    .sliderContainer{
-      position: absolute;
-      top: calc(100vh - 300px);
-    }
-    .slider{
-      position: relative;
-      white-space: nowrap;
-      @media screen and (max-width: 1024px){
-        width: auto;
-        margin: 190px;
-        p:nth-child(1){
-          font-size: 80px;
-          user-select: none;
-        }
-        p:nth-child(2){
-          font-size: 80px;
-          user-select: none;
-        }
-      }
-      @media screen and (max-width: 768px){
-        width: auto;
-        p:nth-child(1){
-          font-size: 40px;
-          top: 30px;
-          user-select: none;
-        }
-        p:nth-child(2){
-          font-size: 40px;
-          user-select: none;
-        }
-      }
-      @media screen and (max-width: 378px){
-        width: auto;
-        p:nth-child(1){
-          font-size: 40px;
-          top: -400px;
-          user-select: none;
-        }
-        p:nth-child(2){
-          font-size: 40px;
-          top: -400px;
-          user-select: none;
-        }
-      }
-    }
-    .slider p{
-      color: white;
-      font-family: Lexend;
-      position: relative;
-      margin: 0px;
-      font-size: 230px;
-      font-weight: 500;
-      padding-right: 50px;
-      cursor: default;
-      user-select: none;
-    }
-    .slider p:hover {
-        background: linear-gradient(180deg, #ffffff 0%, #c1ff5dea 100%);
-        color:transparent;
-        -webkit-background-clip: text;
-        background-clip: text;
-        transition: color 0.5s ease-in-out;
-      }
-    .slider p:nth-of-type(2){
-      position: absolute;
-      left: 100%;
-      top: 0;
-    }
+	.sliderContainer {
+		position: absolute;
+		top: calc(100vh - 300px);
+	}
+	.slider {
+		position: relative;
+		white-space: nowrap;
+		@media screen and (max-width: 1024px) {
+			width: auto;
+			margin: 190px;
+			p:nth-child(1) {
+				font-size: 80px;
+				user-select: none;
+			}
+			p:nth-child(2) {
+				font-size: 80px;
+				user-select: none;
+			}
+		}
+		@media screen and (max-width: 768px) {
+			width: auto;
+			p:nth-child(1) {
+				font-size: 40px;
+				top: 30px;
+				user-select: none;
+			}
+			p:nth-child(2) {
+				font-size: 40px;
+				user-select: none;
+			}
+		}
+		@media screen and (max-width: 378px) {
+			width: auto;
+			p:nth-child(1) {
+				font-size: 40px;
+				top: -400px;
+				user-select: none;
+			}
+			p:nth-child(2) {
+				font-size: 40px;
+				top: -400px;
+				user-select: none;
+			}
+		}
+	}
+	.slider p {
+		color: white;
+		font-family: Lexend;
+		position: relative;
+		margin: 0px;
+		font-size: 230px;
+		font-weight: 500;
+		padding-right: 50px;
+		cursor: default;
+		user-select: none;
+	}
+	.slider p:hover {
+		background: linear-gradient(180deg, #ffffff 0%, #c1ff5dea 100%);
+		color: transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+		transition: color 0.5s ease-in-out;
+	}
+	.slider p:nth-of-type(2) {
+		position: absolute;
+		left: 100%;
+		top: 0;
+	}
 
-    .sliderContainer{
-      position: absolute;
-      top: calc(100vh - 300px);
-    }
-    
-    .slider{
-      position: relative;
-      white-space: nowrap;
-      @media screen and (max-width: 1024px){
-        width: auto;
-        margin: 190px;
-        p:nth-child(1){
-          font-size: 80px;
-          user-select: none;
-        }
-        p:nth-child(2){
-          font-size: 80px;
-          user-select: none;
-        }
-      }
-      @media screen and (max-width: 768px){
-        width: auto;
-        p:nth-child(1){
-          font-size: 40px;
-          top: 30px;
-          user-select: none;
-        }
-        p:nth-child(2){
-          font-size: 40px;
-          top: 30px;
-          user-select: none;
-        }
-      }
-      @media screen and (max-width: 378px){
-        width: auto;
-        p:nth-child(1){
-          font-size: 40px;
-          top: -400px;
-          user-select: none;
-        }
-        p:nth-child(2){
-          font-size: 40px;
-          top: -400px;
-          user-select: none;
-        }
-      }
-    }
+	.sliderContainer {
+		position: absolute;
+		top: calc(100vh - 300px);
+	}
 
-    .description{
-      position: absolute;
-      top: 48%;
-      left: 65%;
-      color: white;
-      font-weight: 300;
-      p{
-        font-family: Lexend;
-        margin: 0px;
-        margin-bottom: 10px;
-        font-size: 24px;
-        font-weight: 500;
-        user-select: none;
-      }
-      p:hover{
-        cursor: default;      
-        background: linear-gradient(45deg, #dafff8 0%, #c1ff5dcd 100%);
-        color: transparent;
-        background-clip: text;
-        transition: color 0.3s ease-in-out;
-        text-shadow: 2px 1px rgba($color: #000000bb, $alpha: 0.7);
-        user-select: none;
-      }
-      svg{
-        transform: scale(2);
-        margin-bottom: 10px;
-      }
-    }
-    @media screen and (max-width: 768px) {
-      .description{
-        font-size: 12px;
-        top: 80%;
-        left: 10%;
-      }
-  }
-      @media screen and (max-width: 768px) {
-      .description p{
-        font-size: 20px;
-        user-select: none;
-      }
-  }
+	.slider {
+		position: relative;
+		white-space: nowrap;
+		@media screen and (max-width: 1024px) {
+			width: auto;
+			margin: 190px;
+			p:nth-child(1) {
+				font-size: 80px;
+				user-select: none;
+			}
+			p:nth-child(2) {
+				font-size: 80px;
+				user-select: none;
+			}
+		}
+		@media screen and (max-width: 768px) {
+			width: auto;
+			p:nth-child(1) {
+				font-size: 40px;
+				top: 30px;
+				user-select: none;
+			}
+			p:nth-child(2) {
+				font-size: 40px;
+				top: 30px;
+				user-select: none;
+			}
+		}
+		@media screen and (max-width: 378px) {
+			width: auto;
+			p:nth-child(1) {
+				font-size: 40px;
+				top: -400px;
+				user-select: none;
+			}
+			p:nth-child(2) {
+				font-size: 40px;
+				top: -400px;
+				user-select: none;
+			}
+		}
+	}
+
+	.description {
+		position: absolute;
+		top: 48%;
+		left: 65%;
+		color: white;
+		font-weight: 300;
+		p {
+			font-family: Lexend;
+			margin: 0px;
+			margin-bottom: 10px;
+			font-size: 24px;
+			font-weight: 500;
+			user-select: none;
+		}
+		p:hover {
+			cursor: default;
+			background: linear-gradient(45deg, #dafff8 0%, #c1ff5dcd 100%);
+			color: transparent;
+			background-clip: text;
+			transition: color 0.3s ease-in-out;
+			text-shadow: 2px 1px rgba($color: #000000bb, $alpha: 0.7);
+			user-select: none;
+		}
+		svg {
+			transform: scale(2);
+			margin-bottom: 10px;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		.description {
+			font-size: 12px;
+			top: 75%;
+			left: 10%;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		.description p {
+			font-size: 20px;
+			user-select: none;
+		}
+	}
 }

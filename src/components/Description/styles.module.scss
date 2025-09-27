@@ -1,121 +1,122 @@
 .description {
-    padding-left: 200px;
-    padding-right: 200px;
-    margin-top: 200px;
-    margin-bottom: 200px;
-    display: flex;
-    justify-content: center;
+	padding-left: 200px;
+	padding-right: 200px;
+	margin-top: 200px;
 
-    @media screen and (max-width: 768px) {
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-top: 50px;
-        margin-bottom: 30px;
-        flex-direction: column;
-        align-items: center;
-    }
+	display: flex;
+	justify-content: center;
 
-    @media screen and (min-width: 925px) and (max-width: 1150px) {
-    .description .body .button {
-        top: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        position: static;
-        margin-top: 50px;
-        width: 150px;
-        height: 150px;
-    }
+	@media screen and (max-width: 768px) {
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-top: 50px;
+		margin-bottom: 30px;
+		flex-direction: column;
+		align-items: center;
+	}
 
-    .description {
-        padding-left: 100px;
-        padding-right: 100px;
-    }
+	@media screen and (min-width: 925px) and (max-width: 1150px) {
+		.description .body .button {
+			top: auto;
+			left: 50%;
+			transform: translateX(-50%);
+			position: static;
+			margin-top: 50px;
+			width: 150px;
+			height: 150px;
+		}
 
-    .body {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+		.description {
+			padding-left: 100px;
+			padding-right: 100px;
+		}
 
-    .body {
-        display: flex;
-        gap: 50px;
-        position: relative;
+		.body {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
 
-        @media screen and (max-width: 768px) {
-            flex-direction: column;
-            gap: 20px;
-            align-items: center;
-        }
+	.body {
+		display: flex;
+		gap: 50px;
+		position: relative;
 
-        p {
-            margin: 0px;
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+			gap: 20px;
+			align-items: center;
+		}
 
-            &:nth-of-type(1) {
-                font-size: 36px;
-                gap: 8px;
-                line-height: 1.3;
+		p {
+			margin: 0px;
 
-                @media screen and (max-width: 768px) {
-                    font-size: 24px;
-                    text-align: center;
-                }
+			&:nth-of-type(1) {
+				font-size: 36px;
+				gap: 8px;
+				line-height: 1.3;
 
-                span {
-                    margin-right: 3px;
-                }
+				@media screen and (max-width: 768px) {
+					font-size: 24px;
+					text-align: center;
+				}
 
-                .mask {
-                    position: relative;
-                    overflow: hidden;
-                    display: inline-flex;
-                }
-            }
+				span {
+					margin-right: 3px;
+				}
 
-            &:nth-of-type(2) {
-                font-size: 18px;
-                width: 80%;
-                font-weight: 300;
+				.mask {
+					position: relative;
+					overflow: hidden;
+					display: inline-flex;
+				}
+			}
 
-                @media screen and (max-width: 768px) {
-                    width: 100%;
-                    text-align: center;
-                }
-            }
-        }
+			&:nth-of-type(2) {
+				font-size: 18px;
+				width: 80%;
+				font-weight: 300;
 
-        .button {
-            top: 80%;
-            left: calc(100% - 200px);
-            width: 180px;
-            height: 180px;
-            background-color: #1C1D20;
-            color: white;
-            border-radius: 50%;
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: large;
+				@media screen and (max-width: 768px) {
+					width: 100%;
+					text-align: center;
+				}
+			}
+		}
 
-            @media screen and (max-width: 768px) {
-                position: static;
-                top: auto;
-                left: auto;
-                transform: none;
-                width: 150px;
-                height: 150px;
-                margin-top: 20px;
-            }
+		.button {
+			top: 80%;
+			left: calc(100% - 200px);
+			width: 180px;
+			height: 180px;
+			background-color: #1c1d20;
+			color: white;
+			border-radius: 50%;
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			font-size: large;
+            text-align: center;
 
-            p {
-                margin: 0px;
-                font-size: 16px;
-                font-weight: 300;
-                position: relative;
-                z-index: 1;
-            }
-        }
-    }
+			@media screen and (max-width: 768px) {
+				position: static;
+				top: auto;
+				left: auto;
+				transform: none;
+				width: 150px;
+				height: 150px;
+				margin-top: 20px;
+			}
+
+			p {
+				margin: 0px;
+				font-size: 16px;
+				font-weight: 300;
+				position: relative;
+				z-index: 1;
+			}
+		}
+	}
 }

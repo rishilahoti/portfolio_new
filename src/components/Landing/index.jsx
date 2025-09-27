@@ -1,22 +1,22 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
+
 import Image from 'next/image';
 import styles from './style.module.scss';
-import { useRef, useLayoutEffect } from 'react';
+import { useRef, useLayoutEffect, useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { slideUp } from './animation';
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
 
 export default function Home() {
 	const firstText = useRef(null);
 	const secondText = useRef(null);
 	const slider = useRef(null);
-	let xPercent = 0;
-	let direction = -1;
+	const directionRef = useRef(-1);
+	const xPercentRef = useRef(0);
+	const rAFRef = useRef(null);
 
-    const [time, setTime] = useState("");
+	const [time, setTime] = useState('');
 
 	useEffect(() => {
 		const updateTime = () => {
@@ -44,25 +44,37 @@ export default function Home() {
 					scrub: 0.5,
 					start: 0,
 					end: window.innerHeight,
-					onUpdate: (e) => (direction = e.direction * -1),
+					onUpdate: (self) =>
+						(directionRef.current = self.direction * -1),
 				},
 				x: '-500px',
 			});
 
-			requestAnimationFrame(animate);
+			rAFRef.current = requestAnimationFrame(animate);
 		}
+
+		return () => {
+			ScrollTrigger.getAll().forEach((st) => st.kill());
+			cancelAnimationFrame(rAFRef.current);
+		};
 	}, []);
 
 	const animate = () => {
+		let xPercent = xPercentRef.current;
+
 		if (xPercent < -100) {
 			xPercent = 0;
 		} else if (xPercent > 0) {
 			xPercent = -100;
 		}
-		gsap.set(firstText.current, { xPercent: xPercent });
-		gsap.set(secondText.current, { xPercent: xPercent });
-		xPercent += 0.03 * direction;
-		requestAnimationFrame(animate);
+
+		gsap.set(firstText.current, { xPercent });
+		gsap.set(secondText.current, { xPercent });
+
+		xPercent += 0.06 * directionRef.current;
+		xPercentRef.current = xPercent;
+
+		rAFRef.current = requestAnimationFrame(animate);
 	};
 
 	return (
@@ -73,18 +85,11 @@ export default function Home() {
 			className={styles.landing}
 			id="home"
 		>
-			<Image
-				src="/images/4.png"
-				fill={true}
-				alt="background"
-				priority={true}
-			/>
+			<Image src="/images/4.png" fill={true} alt="background" priority />
 			<div className={styles.sliderContainer}>
 				<div ref={slider} className={styles.slider}>
-					<div>
-						<p ref={firstText}>Rishi Lahoti —</p>
-						<p ref={secondText}>Rishi Lahoti —</p>
-					</div>
+					<p ref={firstText}>Rishi Lahoti —</p>
+					<p ref={secondText}>Rishi Lahoti —</p>
 				</div>
 			</div>
 			<div
@@ -116,9 +121,8 @@ export default function Home() {
 						fill="url(#grad1)"
 					/>
 				</svg>
-				<p>Freelance</p>
-				<p>Designer & Developer</p>
-                <p>India: {time}</p>
+				<p>Software Developer</p>
+				<p>India: {time}</p>
 			</div>
 		</motion.main>
 	);
