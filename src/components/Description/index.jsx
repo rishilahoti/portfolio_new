@@ -6,7 +6,7 @@ import Magnetic from '../../common/Magnetic';
 import Circuit from '../Circuit/Circuit';
 import toast from 'react-hot-toast';
 
-export default function index() {
+export default function Description() {
 	const phrase = `Seeking remote/hybrid opportunities in Software Development, would really appreciate the chance to contribute.`;
 	const description = useRef(null);
 	const isInView = useInView(description);

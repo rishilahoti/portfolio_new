@@ -5,6 +5,13 @@
 	justify-content: center;
 	position: sticky;
 	top: 0px;
+	z-index: 1;
+
+	&.lastCard {
+		position: relative;
+		z-index: 1;
+		margin-bottom: 50vh;
+	}
 
 	@media screen and (max-width: 1024px) {
 		margin: auto;

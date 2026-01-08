@@ -1,13 +1,22 @@
 .contact{
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #141516;
-    position: absolute;
+    position: relative;
+    @media screen and (max-width: 768px) {
+        overflow-x: hidden;
+        padding: 20px;
+        min-height: auto;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
     .button{
         border-radius: 3em;
         border: 1px solid rgb(136, 136, 136);
@@ -17,11 +26,31 @@
         align-items: center;
         justify-content: center;
         padding: 15px 60px 15px 60px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s ease;
+    
+        @media screen and (max-width: 768px) {
+            padding: 12px 30px;
+        }
+
+        @media screen and (max-width: 480px) {
+            padding: 10px 20px;
+        }
+
+        &:hover {
+            border-color: white;
+        }
     
         p{
             position: relative;
             z-index: 1;
             transition: color 0.4s linear;
+            margin: 0;
+
+            @media screen and (max-width: 768px) {
+                font-size: 12px;
+            }
         }
     
     }
@@ -29,6 +58,14 @@
         width: 100%;
         max-width: 1800px;
         background-color: #141516;
+        position: relative;
+        z-index: 1;
+
+        @media screen and (max-width: 768px) {
+            padding: 0 16px;
+            width: 100%;
+            max-width: 100%;
+        }
 
         .title{
             border-bottom: 1px solid rgb(134, 134, 134);
@@ -36,15 +73,49 @@
             margin-left: 200px;
             margin-right: 200px;
             position: relative;
+
+            @media screen and (max-width: 1024px) {
+                margin-left: 100px;
+                margin-right: 100px;
+                padding-bottom: 80px;
+            }
+
+            @media screen and (max-width: 768px) {
+                margin-left: 0;
+                margin-right: 0;
+                padding-bottom: 60px;
+                padding-left: 16px;
+                padding-right: 16px;
+                width: 100%;
+            }
+
             span{
                 display: flex;
                 align-items: center;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                @media screen and (max-width: 768px) {
+                    gap: 8px;
+                }
+
                 .imageContainer{
                     width: 100px;
                     height: 100px;
                     position: relative;
                     border-radius: 50%;
                     overflow: hidden;
+                    flex-shrink: 0;
+
+                    @media screen and (max-width: 768px) {
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    @media screen and (max-width: 480px) {
+                        width: 50px;
+                        height: 50px;
+                    }
 
                     img{
                         object-fit: cover;
@@ -52,37 +123,85 @@
                 }
                 h2{
                     margin-left: 0.3em;
+
+                    @media screen and (max-width: 768px) {
+                        margin-left: 0.2em;
+                    }
                 }
             }
             h2{
                 font-size: 5vw;
                 margin: 0px;
                 font-weight: 300;
+                line-height: 1.2;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 8vw;
+                }
+
+                @media screen and (max-width: 480px) {
+                    font-size: 10vw;
+                }
             }
             .buttonContainer{
                 position: absolute;
                 left: calc(100% - 400px); 
                 top: calc(100% - 75px);
+
+                @media screen and (max-width: 1024px) {
+                    left: calc(100% - 300px);
+                }
+
+                @media screen and (max-width: 768px) {
+                    position: relative;
+                    left: auto;
+                    top: auto;
+                    margin-top: 40px;
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                }
+
                 .rounded{
-        width: 180px;
-        height: 180px;
-        background-color: #455CE9;
-        color: white;
-        border-radius: 50%;
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        padding: 0px;
-        p{
-            margin: 0px;
-            font-size: 16px;
-            font-weight: 300;
-            z-index: 2;
-            position: relative;
-        }
-    }
+                    width: 180px;
+                    height: 180px;
+                    background-color: #455CE9;
+                    color: white;
+                    border-radius: 50%;
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    padding: 0px;
+
+                    @media screen and (max-width: 768px) {
+                        position: relative;
+                        width: 140px;
+                        height: 140px;
+                    }
+
+                    @media screen and (max-width: 480px) {
+                        width: 120px;
+                        height: 120px;
+                    }
+
+                    p{
+                        margin: 0px;
+                        font-size: 16px;
+                        font-weight: 300;
+                        z-index: 2;
+                        position: relative;
+
+                        @media screen and (max-width: 768px) {
+                            font-size: 14px;
+                        }
+
+                        @media screen and (max-width: 480px) {
+                            font-size: 12px;
+                        }
+                    }
+                }
                 .button{
                     width: 180px;
                     height: 180px;
@@ -95,12 +214,32 @@
                     justify-content: center;
                     cursor: pointer;
                     padding: 0px;
+
+                    @media screen and (max-width: 768px) {
+                        position: relative;
+                        width: 140px;
+                        height: 140px;
+                    }
+
+                    @media screen and (max-width: 480px) {
+                        width: 120px;
+                        height: 120px;
+                    }
+
                     p{
                         margin: 0px;
                         font-size: 16px;
                         font-weight: 300;
                         z-index: 2;
                         position: relative;
+
+                        @media screen and (max-width: 768px) {
+                            font-size: 14px;
+                        }
+
+                        @media screen and (max-width: 480px) {
+                            font-size: 12px;
+                        }
                     }
                 }
             }
@@ -109,6 +248,10 @@
                 position: absolute;
                 top: 30%;
                 left: 100%;
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
             }
         }
         .nav{
@@ -117,20 +260,71 @@
             margin-top: 100px;
             margin-left: 200px;
             margin-right: 200px;
+
+            @media screen and (max-width: 1024px) {
+                margin-left: 100px;
+                margin-right: 100px;
+            }
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 60px;
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+                padding: 0 16px;
+            }
+
+            @media screen and (max-width: 480px) {
+                margin-top: 40px;
+                gap: 12px;
+            }
         }
         .info{
             display: flex;
             justify-content: space-between;
             margin-top: 100px;
             padding: 20px;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                gap: 40px;
+                margin-top: 60px;
+                padding: 20px 16px;
+                width: 100%;
+            }
+
+            @media screen and (max-width: 480px) {
+                margin-top: 40px;
+                gap: 30px;
+                padding: 20px 16px;
+            }
+
             div{
                 display: flex;
                 gap: 10px;
                 align-items: flex-end;
+
+                @media screen and (max-width: 768px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 20px;
+                }
+
                 p, h3{
                     margin: 0px;
                     padding: 2.5px;
                     cursor: pointer;
+                    word-break: break-word;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 14px;
+                    }
+
+                    @media screen and (max-width: 480px) {
+                        font-size: 12px;
+                    }
                 }
                 p{
                     &::after{
@@ -155,12 +349,20 @@
                     display: flex;
                     flex-direction: column;
                     gap: 15px;
+
+                    @media screen and (max-width: 768px) {
+                        gap: 12px;
+                    }
                 }
                 h3{
                     color: grey;
                     cursor: default;
                     font-weight: 300;
                     font-size: 1em;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 0.9em;
+                    }
                 }
             }
             

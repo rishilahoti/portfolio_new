@@ -15,6 +15,7 @@ const Card = ({
 	progress,
 	range,
 	targetScale,
+	isLast,
 }) => {
 	const container = useRef(null);
 	const { scrollYProgress } = useScroll({
@@ -26,7 +27,7 @@ const Card = ({
 	const scale = useTransform(progress, range, [1, targetScale]);
 
 	return (
-		<div ref={container} className={styles.cardContainer} id="work">
+		<div ref={container} className={`${styles.cardContainer} ${isLast ? styles.lastCard : ''}`} id={i === 0 ? "work" : undefined}>
 			<motion.div
 				style={{
 					backgroundColor: color,
@@ -42,7 +43,7 @@ const Card = ({
 						<p>{description2}</p>
 						<p>{description3}</p>
 						<span>
-							<a href={link} target="_blank">
+							<a href={link} target="_blank" rel="noopener noreferrer">
 								See more
 							</a>
 							<svg
@@ -78,7 +79,7 @@ const Card = ({
 								className={styles.inner}
 								style={{ scale: imageScale }}
 							>
-								<Image fill src={`/images/${src}`} alt="image" />
+								<Image fill src={`/images/${src}`} alt={title || 'Project image'} />
 							</motion.div>
 						</div>
 					)}

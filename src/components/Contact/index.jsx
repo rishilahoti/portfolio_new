@@ -1,11 +1,11 @@
 import styles from './styles.module.scss';
 import Image from 'next/image';
 import { useRef } from 'react';
-import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
+import { useScroll, motion, useTransform } from 'framer-motion';
 import Magnetic from '../../common/Magnetic';
 import Rounded from '../../common/RoundedButton';
 
-export default function index() {
+export default function Contact() {
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -22,7 +22,7 @@ export default function index() {
                         <div className={styles.imageContainer}>
                             <Image 
                             fill={true}
-                            alt={"image"}
+                            alt="Contact section background"
                             src={`/images/4.png`}
                             />
                         </div>
@@ -39,12 +39,12 @@ export default function index() {
                     </motion.svg>
                 </div>
                 <div className={styles.nav}>
-                        <div className={styles.button}>
+                        <a href="mailto:rishilahoti99@gmail.com" className={styles.button}>
                             <p>rishilahoti99@gmail.com</p>
-                        </div>
-                        <div className={styles.button}>
-                            <p>+91-898277002</p>
-                        </div>
+                        </a>
+                        <a href="tel:+918982770027" className={styles.button}>
+                            <p>+91-8982770027</p>
+                        </a>
                 </div>
                 <div className={styles.info}>
                     <div>

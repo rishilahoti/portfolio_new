@@ -12,6 +12,9 @@ import Contact from '../components/Contact';
 import Lenis from '@studio-freight/lenis';
 import { projects } from './data';
 
+// Preloader timeout constant
+const PRELOADER_TIMEOUT = 2000;
+
 export default function Home() {
 	const [isLoading, setIsLoading] = useState(true);
 	const container = useRef(null);
@@ -36,20 +39,18 @@ export default function Home() {
 			lenis.destroy();
 		};
 	}, []);
-	useEffect(() => {
-		(async () => {
-			const LocomotiveScroll = (await import('locomotive-scroll'))
-				.default;
-			const locomotiveScroll = new LocomotiveScroll();
 
-			setTimeout(() => {
-				setIsLoading(false);
-				document.body.style.cursor = 'default';
-				window.scrollTo(0, 0);
-			}, 2000);
-			return () => clearTimeout(timer);
-		})();
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setIsLoading(false);
+			document.body.style.cursor = 'default';
+			window.scrollTo(0, 0);
+		}, PRELOADER_TIMEOUT);
+
+		return () => clearTimeout(timer);
 	}, []);
+
+	const filteredProjects = projects.filter((project) => project.title && project.src);
 
 	return (
 		<main ref={container} className={styles.main}>
@@ -59,20 +60,24 @@ export default function Home() {
 			<Landing />
 			<Description />
             <Toaster position="top-left" />
-			{projects.map((project, i) => {
-				const targetScale = 1 - (projects.length - i) * 0.05;
-				return (
-					<Projects
-						key={`p_${i}`}
-						i={i}
-						{...project}
-						progress={scrollYProgress}
-						range={[i * 0.25, 1]}
-						targetScale={targetScale}
-					/>
-				);
-			})}
-
+			<div className={styles.projectsContainer}>
+				{filteredProjects.map((project, i) => {
+					const targetScale = 1 - (filteredProjects.length - i) * 0.05;
+					const isLast = i === filteredProjects.length - 1;
+					return (
+						<Projects
+							key={`p_${i}`}
+							i={i}
+							{...project}
+							progress={scrollYProgress}
+							range={[i * 0.25, 1]}
+							targetScale={targetScale}
+							isLast={isLast}
+						/>
+					);
+				})}
+			</div>
+			<div className={styles.spacer}></div>
 			<Contact />
 		</main>
 	);

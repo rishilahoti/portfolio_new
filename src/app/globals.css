@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
+/* Font is now loaded via next/font/google in layout.js */
 body{
-    font-family: Lexend;
+    font-family: var(--font-lexend), sans-serif;
     margin: 0px;
     overflow: hidden; 
     cursor: wait;

@@ -1,3 +1,14 @@
 .main{
-    font-family: Lexend;
+    font-family: var(--font-lexend), sans-serif;
+}
+
+.projectsContainer {
+    position: relative;
+}
+
+.spacer {
+    height: 20vh;
+    position: relative;
+    z-index: 0;
+    pointer-events: none;
 }

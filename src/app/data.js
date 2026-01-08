@@ -34,12 +34,4 @@ export const projects = [
 		link: '',
 		color: '#ffe3e1',
 	},
-	{
-		title: '',
-		description: ``,
-		description2: ``,
-		src: '',
-		link: '',
-		color: '#faebd700',
-	},
 ];

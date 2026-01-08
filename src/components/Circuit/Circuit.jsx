@@ -35,9 +35,9 @@ const Circuit = () => {
 		},
 		{
 			position: 100,
-			title: 'Searching Roles',
-			date: 'Present',
-			description: 'Software Developer, Frontend/Full-Stack Developer',
+			title: 'Instavid/Postship',
+			date: 'Nov-2025 - Present',
+			description: 'Software Engineer',
 			side: 'neutral',
 			startDate: new Date('2025-09-01'),
 		},
