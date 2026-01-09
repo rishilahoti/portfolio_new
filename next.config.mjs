@@ -13,11 +13,6 @@ const nextConfig = {
 	// Production optimizations
 	swcMinify: true,
 	
-	// Performance optimizations
-	experimental: {
-		optimizeCss: true,
-	},
-	
 	// Headers for security and performance
 	async headers() {
 		return [
