@@ -1,6 +1,6 @@
 /* Font is now loaded via next/font/google in layout.js */
 body{
-    font-family: Lexend, sans-serif;
+    font-family: var(--font-lexend), sans-serif;
     margin: 0px;
     overflow: hidden; 
     cursor: wait;

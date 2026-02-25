@@ -36,7 +36,7 @@ const Circuit = () => {
 		{
 			position: 100,
 			title: 'Instavid/Postship',
-			date: 'Nov-2025 - Present',
+			date: 'Nov-2025 - Feb-2026',
 			description: 'Software Engineer',
 			side: 'neutral',
 			startDate: new Date('2025-09-01'),

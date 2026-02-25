@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
 .landing {
 	position: relative;
 	display: flex;
@@ -91,7 +89,7 @@
 	}
 	.slider p {
 		color: white;
-		font-family: Lexend;
+		font-family: var(--font-lexend), sans-serif;
 		position: relative;
 		margin: 0px;
 		font-size: 230px;
@@ -168,7 +166,7 @@
 		color: white;
 		font-weight: 300;
 		p {
-			font-family: Lexend;
+			font-family: var(--font-lexend), sans-serif;
 			margin: 0px;
 			margin-bottom: 10px;
 			font-size: 24px;
