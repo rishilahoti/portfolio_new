@@ -1,0 +1,28 @@
+# Rishi Lahoti
+
+> Software Engineer specializing in full-stack and AI systems: multi-agent pipelines, codebase intelligence, and cloud infrastructure.
+
+Portfolio site: https://rishilahoti.vercel.app
+
+## Profile
+
+- Role: Software Engineer - Full Stack & AI Systems
+- Stack: Go, TypeScript, Python, Next.js, React, Django, PostgreSQL, Neo4j, AWS (S3, EC2, Bedrock, CloudFront), GCP
+- GitHub: https://github.com/rishilahoti
+- LinkedIn: https://www.linkedin.com/in/rishilahoti/
+- Twitter/X: https://twitter.com/rishii_lahoti
+- Resume: https://rishilahoti.vercel.app/rishi_resume.pdf
+
+## Experience
+
+- AI Software Engineer, Prodinit (Mar 2026 - Present) — codebase-intelligence layer for an AI developer platform (tree-sitter indexing, Neo4j context graph, AWS Bedrock subagents); multi-agent product-image pipeline in production at IndiaMART scale.
+- Software Developer, Postship / Instavid (Nov 2025 - Feb 2026) — Go microservices (REST/gRPC, PostgreSQL/GORM), AI video generation pipeline, AWS/Cloudflare/Cloudinary media infrastructure.
+- Front-End Developer, Nature Crave (Feb 2025 - Aug 2025) — Next.js + Tailwind e-commerce site, 95+ Lighthouse scores.
+
+## Projects
+
+- WhatRunsIndia — Next.js, TypeScript, Django, PostgreSQL, Meta Graph API. Catalog-to-multichannel creative pipeline for D2C ad creative fatigue.
+- AshbyHQ Job Scraper — Node.js, Postgres, Next.js, GitHub Actions. End-to-end job aggregation platform with cron-driven ingestion.
+- LH44-INN — Next.js, TypeScript, Tailwind CSS, Spring Boot. Hotel search and booking platform with live availability.
+- Clipboard History (OSS) — React, TypeScript, Plasmo browser extension.
+- Portfolio (this site) — Next.js, Sass, Framer Motion, GSAP

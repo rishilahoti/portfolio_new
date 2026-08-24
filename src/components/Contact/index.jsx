@@ -4,8 +4,10 @@ import { useRef } from 'react';
 import { useScroll, motion, useTransform } from 'framer-motion';
 import Magnetic from '../../common/Magnetic';
 import Rounded from '../../common/RoundedButton';
+import { useResumeModal } from '../../common/ResumeModal';
 
 export default function Contact() {
+    const { openResume } = useResumeModal();
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -23,7 +25,7 @@ export default function Contact() {
                             <Image 
                             fill={true}
                             alt="Contact section background"
-                            src={`/images/4.png`}
+                            src={`/images/4.webp`}
                             />
                         </div>
                         <h2>Let's work</h2>
@@ -71,7 +73,7 @@ export default function Contact() {
                             <p>LinkedIn</p>
                         </Magnetic>
                         <Magnetic>
-                            <p>Resume</p>
+                            <p onClick={openResume} style={{ cursor: 'pointer' }}>Resume</p>
                         </Magnetic>
                     </div>
                 </div>

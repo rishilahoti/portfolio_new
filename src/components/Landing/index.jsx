@@ -85,12 +85,12 @@ export default function Home() {
 			className={styles.landing}
 			id="home"
 		>
-			<Image src="/images/4.png" fill={true} alt="background" priority />
+			<Image src="/images/4.webp" fill={true} alt="background" priority />
 			<div className={styles.sliderContainer}>
-				<div ref={slider} className={styles.slider}>
+				<h1 ref={slider} className={styles.slider}>
 					<p ref={firstText}>Rishi Lahoti —</p>
-					<p ref={secondText}>Rishi Lahoti —</p>
-				</div>
+					<p ref={secondText} aria-hidden="true">Rishi Lahoti —</p>
+				</h1>
 			</div>
 			<div
 				data-scroll
@@ -121,7 +121,7 @@ export default function Home() {
 						fill="url(#grad1)"
 					/>
 				</svg>
-				<p>Software Developer</p>
+				<p>Software Engineer</p>
 				<p>India: {time}</p>
 			</div>
 		</motion.main>

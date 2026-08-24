@@ -5,13 +5,15 @@ import { slideUp, opacity } from './animation';
 import Magnetic from '../../common/Magnetic';
 import Circuit from '../Circuit/Circuit';
 import toast from 'react-hot-toast';
+import { useResumeModal } from '../../common/ResumeModal';
 
 export default function Description() {
 	const phrase = `Seeking remote/hybrid opportunities in Software Development, would really appreciate the chance to contribute.`;
 	const description = useRef(null);
 	const isInView = useInView(description);
+	const { openResume } = useResumeModal();
 	const handleDownload = () => {
-		window.open('/rishi_resume.pdf', '_blank');
+		openResume();
 	};
 	const hasPlayed = useRef(false);
 	useEffect(() => {

@@ -4,15 +4,17 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Rounded from '../../../../common/RoundedButton';
 import Magnetic from '../../../../common/Magnetic';
 import { usePathname } from 'next/navigation';
+import { useResumeModal } from '../../../../common/ResumeModal';
 
 export default function index() {
+	const { openResume } = useResumeModal();
 	return (
 		<>
 			<div className={styles.footer}>
 				<Magnetic>
 					<div className={styles.el}>
 						<a
-							href="https://www.linkedin.com/in/rishi-lahoti-665889166/"
+							href="https://www.linkedin.com/in/rishilahoti/"
 							target="_blank"
 						>
 							LinkedIn
@@ -44,10 +46,7 @@ export default function index() {
 				</Magnetic>
 				<Magnetic>
 					<div className={styles.el}>
-						<a
-							href="https://drive.google.com/file/d/1hypQJfvYegfps9uh1_Nc0GXYD2zjzOIX/view?usp=sharing"
-							target="_blank"
-						>
+						<a href="#" onClick={(e) => { e.preventDefault(); openResume(); }}>
 							Resume
 						</a>
 						<div className={styles.indicator}></div>
